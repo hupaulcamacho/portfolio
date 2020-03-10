@@ -6,6 +6,8 @@ import './App.css';
 import Home from './Components/Home'
 import About from './Components/About'
 import Projects from './Components/Projects'
+import Skills from './Components/Skills'
+import SocialMedia from './Components/SocialMedia';
 
 class App extends Component {
   state = {
@@ -31,6 +33,11 @@ class App extends Component {
         description: 'Programming languages and skills I have mastered.'
       })
     }
+    if (word === 'SOCIAL MEDIA') {
+      this.setState({
+        description: 'Connect and follow me on various social media platforms.'
+      })
+    }
   }
 
   clearDescription = () => {
@@ -49,13 +56,16 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
-        <Switch>
-          <Route path='/projects' component={Projects} />
-          <Route path='/about' component={About} />
-          <Route path='/' render={this.renderHome} />
-        </Switch>
-      </div>
+        <div className="App">
+          <Switch>
+            <Route path='/socialmedia' component={SocialMedia} />
+            <Route path='/skills' component={Skills} />
+            <Route exact path='/projects/:projectname' component={Projects} />
+            <Route path='/projects' component={Projects} />
+            <Route path='/about' component={About} />
+            <Route path='/' render={this.renderHome} />
+          </Switch>
+        </div>
     );
   }
 } 

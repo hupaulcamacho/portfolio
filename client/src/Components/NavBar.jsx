@@ -13,7 +13,10 @@ class NavBar extends Component {
                         <Link value='about' onMouseOver={this.props.handleChange} onMouseOut={this.props.clearDescription} to='/about'>ABOUT ME</Link>
                     </div>
                     <div className='selection' onMouseOver={this.props.handleChange} onMouseOut={this.props.clearDescription} value='skills' >
-                        <Link value='about' onMouseOver={this.props.handleChange} onMouseOut={this.props.clearDescription} to='/about'>SKILLS</Link>
+                        <Link value='about' onMouseOver={this.props.handleChange} onMouseOut={this.props.clearDescription} to='/skills'>SKILLS</Link>
+                    </div>
+                    <div className='selection' onMouseOver={this.props.handleChange} onMouseOut={this.props.clearDescription} value='social-media' >
+                        <Link value='about' onMouseOver={this.props.handleChange} onMouseOut={this.props.clearDescription} to='/socialmedia'>SOCIAL MEDIA</Link>
                     </div>
                 </nav>
             </div>
