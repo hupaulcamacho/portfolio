@@ -73,11 +73,11 @@ class Projects extends Component {
             })
         }
     }
-    handleMouseOut = () => {
-        this.setState({
-            title: '',
-            selectedCharacter: null
-        })
+
+    renderImg = () => {
+        const { selectedCharacter } = this.state
+       return <img key={selectedCharacter} className='char-portrait' src={selectedCharacter} />
+
     }
 
     render() {
@@ -85,7 +85,7 @@ class Projects extends Component {
         const projectElements = []
         projects.forEach(project => {
             projectElements.push(
-                <img onMouseOver={this.handleMouseOver} onMouseOut={this.handleMouseOut} className='character' src={project.imgUrl} data-name={project.title} />
+                <img onMouseOver={this.handleMouseOver} className='character' src={project.imgUrl} data-name={project.title} />
             )
         })
         return (
@@ -94,7 +94,7 @@ class Projects extends Component {
                 <div className='project-main'>
                     <h1 className='projects-select'>Projects Select</h1>
                     <h1 className='project-title'>{title}</h1>
-                    <img className='char-portrait' src={selectedCharacter} />
+                    {this.renderImg()}
                     <div className='project-container'>
                         {projectElements}
                     </div>

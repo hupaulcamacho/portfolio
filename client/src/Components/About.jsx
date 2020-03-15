@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
 
 const stats = {
     name: 'Hupaul Camacho',
@@ -15,6 +16,10 @@ class About extends Component {
         return (
             <div className='about-main'>
                 <h1 className='page-title'>About Me</h1>
+                <p></p>
+                <div className='back-home'>
+                    <Link to='/'>Back to Home</Link>
+                </div>
             </div>
         )
     }

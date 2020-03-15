@@ -58,13 +58,13 @@ class Skills extends Component {
             <div className='skills-main'>
                 <h1 className='page-title'>Skills</h1>
                 <div className='icons'>
-                    <i onMouseOver={this.handleMouseOver} onMouseOut={this.handleMouseOut} data-name='react' class="fab fa-react" ></i>
-                    <i onMouseOver={this.handleMouseOver} onMouseOut={this.handleMouseOut} data-name='js' class="fab fa-js-square"></i>
-                    <i onMouseOver={this.handleMouseOver} onMouseOut={this.handleMouseOut} data-name='html' class="fab fa-html5"></i>
-                    <i onMouseOver={this.handleMouseOver} onMouseOut={this.handleMouseOut} data-name='css' class="fab fa-css3-alt"></i>
-                    <i onMouseOver={this.handleMouseOver} onMouseOut={this.handleMouseOut} data-name='github' class="fab fa-github"></i>
-                    <i onMouseOver={this.handleMouseOver} onMouseOut={this.handleMouseOut} data-name='adobe' class="fab fa-adobe"></i>
-                    <i onMouseOver={this.handleMouseOver} onMouseOut={this.handleMouseOut} data-name='git' class="fab fa-git-alt"></i>
+                    <i className='icon' onMouseOver={this.handleMouseOver} onMouseOut={this.handleMouseOut} data-name='react' class="fab fa-react" ></i>
+                    <i className='icon' onMouseOver={this.handleMouseOver} onMouseOut={this.handleMouseOut} data-name='js' class="fab fa-js-square"></i>
+                    <i className='icon' onMouseOver={this.handleMouseOver} onMouseOut={this.handleMouseOut} data-name='html' class="fab fa-html5"></i>
+                    <i className='icon' onMouseOver={this.handleMouseOver} onMouseOut={this.handleMouseOut} data-name='css' class="fab fa-css3-alt"></i>
+                    <i className='icon' onMouseOver={this.handleMouseOver} onMouseOut={this.handleMouseOut} data-name='github' class="fab fa-github"></i>
+                    <i className='icon' onMouseOver={this.handleMouseOver} onMouseOut={this.handleMouseOut} data-name='adobe' class="fab fa-adobe"></i>
+                    <i className='icon' onMouseOver={this.handleMouseOver} onMouseOut={this.handleMouseOut} data-name='git' class="fab fa-git-alt"></i>
                 </div>
                 <div className='skill-description'>
                     {description}

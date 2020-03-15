@@ -25,6 +25,8 @@ a:visited {
   text-align: left;
   margin-top: 5%;
   background-image: linear-gradient(to right, rgba(0, 0, 0, 0.712) , rgba(255, 255, 255, 0));
+  font-weight: 600;
+  text-shadow: 2px 2px #000000;
   animation-name: fadeInLeft;
   animation-duration: 1s;
 }
@@ -179,6 +181,7 @@ h1, p {
   padding-bottom: 4%;
   color: white;
   background-image: linear-gradient(to right, rgba(0, 0, 0, 0.712) , rgba(255, 255, 255, 0));
+  text-shadow: 2px 2px #000000;
   font-size: 3vh;
   animation-name: fadeInUp;
   animation-duration: 1s;
@@ -200,14 +203,16 @@ h1, p {
 
 
 .back-home {
+  z-index: 1;
   grid-column: 3;
-  align-self: center;
+  height: 14%;
   justify-self: end;
   grid-row-start: 2;
   padding-top: 4%;
   padding-bottom: 4%;
   padding-left:  20%;
   padding-right:  20%;
+  font-family: 'Ssf4Abuket-7AVD';
 }
 
 .back-home:hover {
@@ -221,7 +226,7 @@ h1, p {
   justify-self: center;
   grid-column: 2;
   grid-row-start: 2;
-  width: 70%;
+  width: 80%;
 }
 
 .fab {
@@ -244,7 +249,7 @@ h1, p {
   grid-row: 1 / 4;
   align-self: end;
   height: 800px;
-  animation-name: fadeInLeft;
+  animation-name: fadeInRight;
   animation-duration: 0.75s;
 }
 
@@ -254,15 +259,23 @@ h1, p {
 }
 
 
+.fab:hover {
+  border: 2px solid rgb(19, 57, 141);
+  animation: pulse-blue-2 1s infinite;
+}
+
+
 /* KEYFRAMES */
 
 @keyframes pulse-red {
 	0% {
     background-color: rgba(255, 0, 0, 0);
   }
+
 	50% {
     background-color: red;
   }
+
   100% {
     background-color: rgba(255, 0, 0, 0);
 	}
@@ -282,6 +295,23 @@ h1, p {
   100% {
     /* box-shadow: 0 0 0 10px rgba(19, 58, 141, 0); */
     border: 5px solid rgb(255, 255, 255);
+	}
+}
+
+@keyframes pulse-blue-2 {
+	0% {
+    /* box-shadow: 0 0 0 0 rgb(19, 57, 141); */
+    border: 2px solid rgb(255, 255, 255);
+	}
+	
+	50% {
+    /* box-shadow: 0 0 0 10px rgba(19, 58, 141, 0); */
+    border: 2px solid rgb(19, 57, 141);
+  }
+
+  100% {
+    /* box-shadow: 0 0 0 10px rgba(19, 58, 141, 0); */
+    border: 2px solid rgb(255, 255, 255);
 	}
 }
 
