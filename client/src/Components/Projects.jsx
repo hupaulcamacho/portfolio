@@ -88,7 +88,8 @@ class Projects extends Component {
                 description: projects[2].description,
                 selectedCharacter: characters.bison,
                 videoURL: projects[2].videoURL,
-                repoURL: projects[2].repo
+                repoURL: projects[2].repo,
+                liveURL: projects[2].live
             })
         }
     }
