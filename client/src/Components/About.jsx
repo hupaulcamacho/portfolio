@@ -1,7 +1,10 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import huey from '../Assets/huey.jpg'
+import github from '../Assets/github.png'
+import linkedin from '../Assets/linkedin.png'
 import movelist from '../Assets/movelist.jpg'
+import '../CSS/About.css'
 
 const stats = {
     name: 'Hupaul Camacho',
@@ -19,6 +22,7 @@ const stats = {
         }
     ]
 }
+console.log()
 
 class About extends Component {
     
@@ -28,6 +32,8 @@ class About extends Component {
         )
         return (
             <div className='about-main'>
+                {/* <h3 className='char-name'>Hupaul</h3>
+                <h4 className='char-title'>The Web Dev</h4> */}
                 <h1 className='page-title'>About Me</h1>
                 <div className='back-home'>
                     <Link to='/'>Back to Home</Link>
@@ -37,8 +43,22 @@ class About extends Component {
                     <div className="more-info">
                         <div className='about-me'><p>{stats.profile}</p></div>
                         <img className='movelist' src={movelist}/>
+                        <a href='https://github.com/hupaulcamacho'>
+                            <div>
+                                <img className='git' src={github}/>
+                                <span className='link'>/hupaulcamacho</span>
+                            </div>
+                        </a>
+                        
+                        <a href='https://www.linkedin.com/in/hupaulcamacho'>
+                            <div>
+                                <img className='in' src={linkedin}/>
+                                <span className='link'>/hupaulcamacho</span>
+                            </div>
+                        </a>
+                        
+
                     </div>
-                    
                 </div>
             </div>
         )
