@@ -6,18 +6,26 @@ class NavBar extends Component {
         return (
             <div>
                 <nav className='main-nav'>
-                    <div className='selection' onMouseOver={this.props.handleChange} onMouseOut={this.props.clearDescription} value='projects' >
-                        <Link value='projects' onMouseOver={this.props.handleChange} onMouseOut={this.props.clearDescription} to='/projects'>PROJECTS</Link>
-                    </div>
-                    <div className='selection' onMouseOver={this.props.handleChange} onMouseOut={this.props.clearDescription} value='about' >
-                        <Link value='about' onMouseOver={this.props.handleChange} onMouseOut={this.props.clearDescription} to='/about'>ABOUT ME</Link>
-                    </div>
-                    <div className='selection' onMouseOver={this.props.handleChange} onMouseOut={this.props.clearDescription} value='skills' >
-                        <Link value='about' onMouseOver={this.props.handleChange} onMouseOut={this.props.clearDescription} to='/skills'>SKILLS</Link>
-                    </div>
-                    <div className='selection' onMouseOver={this.props.handleChange} onMouseOut={this.props.clearDescription} value='social-media' >
-                        <Link value='about' onMouseOver={this.props.handleChange} onMouseOut={this.props.clearDescription} to='/socialmedia'>SOCIAL MEDIA</Link>
-                    </div>
+                    <Link value='projects' onMouseOver={this.props.handleChange} onMouseOut={this.props.clearDescription} to='/projects'>
+                        <div className='selection' onMouseOver={this.props.handleChange} onMouseOut={this.props.clearDescription} value='projects'>
+                            PROJECTS
+                        </div>
+                    </Link>
+                    <Link value='about' onMouseOver={this.props.handleChange} onMouseOut={this.props.clearDescription} to='/about'>
+                        <div className='selection' onMouseOver={this.props.handleChange} onMouseOut={this.props.clearDescription} value='about' >
+                            ABOUT ME
+                        </div>
+                    </Link>
+                    <Link value='skills' onMouseOver={this.props.handleChange} onMouseOut={this.props.clearDescription} to='/skills'>
+                        <div className='selection' onMouseOver={this.props.handleChange} onMouseOut={this.props.clearDescription} value='skills' >
+                            SKILLS
+                        </div>
+                    </Link>
+                    {/* <Link value='contact' onMouseOver={this.props.handleChange} onMouseOut={this.props.clearDescription} to='/contact'>
+                        <div className='selection' onMouseOver={this.props.handleChange} onMouseOut={this.props.clearDescription} value='contact' >
+                            CONTACT
+                        </div>
+                    </Link> */}
                 </nav>
             </div>
         )

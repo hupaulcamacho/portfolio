@@ -10,7 +10,7 @@ class Home extends Component {
                 <h1 className='my-name'>Hupaul Camacho</h1>
                 <p className='my-description'>Full Stack Web Developer</p>
                 <div className='description'>
-                    {this.props.description}
+                    <p>{this.props.description}</p>
                 </div>
             </div>
         )

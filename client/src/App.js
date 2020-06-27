@@ -7,7 +7,7 @@ import Home from './Components/Home'
 import About from './Components/About'
 import Projects from './Components/Projects'
 import Skills from './Components/Skills'
-import SocialMedia from './Components/SocialMedia';
+import Contact from './Components/Contact';
 
 class App extends Component {
   state = {
@@ -20,7 +20,7 @@ class App extends Component {
     console.log(word)
     if (word === 'PROJECTS') {
       this.setState({
-        description: 'A collection of my created web applications.'
+        description: 'A collection of my created web applications and projects that I have worked on.'
       })
     }
     if (word === 'ABOUT ME') {
@@ -30,12 +30,12 @@ class App extends Component {
     }
     if (word === 'SKILLS') {
       this.setState({
-        description: 'Programming languages and skills I have mastered.'
+        description: 'Programming languages and skills I have learned and mastered.'
       })
     }
-    if (word === 'SOCIAL MEDIA') {
+    if (word === 'CONTACT') {
       this.setState({
-        description: 'Connect and follow me on various social media platforms.'
+        description: 'Contact and follow me through various social media platforms.'
       })
     }
   }
@@ -58,7 +58,7 @@ class App extends Component {
     return (
         <div className="App">
           <Switch>
-            <Route path='/socialmedia' component={SocialMedia} />
+            <Route path='/contact' component={Contact} />
             <Route path='/skills' component={Skills} />
             <Route exact path='/projects/:projectname' component={Projects} />
             <Route path='/projects' component={Projects} />
