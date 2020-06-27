@@ -20,82 +20,11 @@ a:visited {
 
 /* --------------------------------------------------- */
 /* NAVBAR STYLING */
-.main-nav {
-  text-align: left;
-  margin-top: 5%;
-  /* padding-top: 5%;
-  padding-bottom: 5%; */
-  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.712) , rgba(255, 255, 255, 0));
-  font-weight: 500;
-  text-shadow: 2px 2px #000000;
-  animation-name: fadeInLeft;
-  animation-duration: 1s;
-}
-.selection {
-  padding-top: 2%;
-  padding-bottom: 2%;
-  padding-left: 20%;
-  font-size: 2vw;
-  background-color: rgba(0, 0, 0, 0);
-  font-family: 'Helvetica Neue';
-}
 
-.selection:hover {
-  /* background: linear-gradient(to right, red , rgba(255, 255, 255, 0)); */
-  background-color: red;
-  animation: pulse-red 1s infinite;
-}
 
 /* --------------------------------------------------- */
 /* MAIN COMPONENT DIV CONTAINERS */
-.home-main {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  width: 100vw;
-  height: 100vh;
-  background-image: url('./Assets/mainmenu.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
-  animation-name: fadeIn;
-  animation-duration: 1s;
-}
 
-.project-main {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
-  width: 100%;
-  height: 100vh;
-  background-image: url('./Assets/background.jpeg');
-  background-repeat: no-repeat;
-  background-size: cover;
-  animation-name: fadeIn;
-  animation-duration: 1s;
-}
-
-.skills-main {
-  display: grid;
-  grid-template-columns: 1fr 50% 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
-  width: 100%;
-  height: 100vh;
-
-  background-size: cover;
-  animation-name: fadeIn;
-  animation-duration: 1s;
-}
-
-.about-main {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
-  width: 100%;
-  height: 100vh;
-  background-repeat: no-repeat;
-  background-size: cover;
-  animation-name: fadeIn;
-  animation-duration: 1s;
-}
 .contact-main {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -109,35 +38,8 @@ a:visited {
 /* --
 ------------------------------------------------- */
 /* HEADERS */
-.my-name {
-  color: white;
-  font-size: 4vw;
-  font-family: 'Ssf4Abuket-7AVD';
-  grid-column: 2;
-  grid-row: 1;
-  height: 30%;
-  justify-self: right;
-  padding-top: 3%;
-  /* padding-right: 3%; */
-  /* background-image: linear-gradient(to left, rgba(255, 0, 0, 0.76) , rgba(255, 255, 255, 0)); */
-  animation-name: fadeInRight;
-  animation-duration: 1s;
-}
-.my-description {
-  color: white;
-  font-size: 1.5vw;
-  margin-top: 5%;
-  font-family: 'Ssf4Abuket-7AVD';
-  grid-column: 2;
-  grid-row: 1;
-  justify-self: right;
-  padding-right: 5%;
-  margin-top: 25%;
-  animation-name: fadeInRight;
-  animation-duration: 1s;
-}
 
-.projects-select, .page-title {
+.page-title {
   padding-right: 5%;
   z-index: 2;
   background-image: linear-gradient(to left, rgba(255, 0, 0, 0.596) , rgba(255, 255, 255, 0));
@@ -150,145 +52,12 @@ a:visited {
   font-family: 'Ssf4Abuket-7AVD';
 }
 
-.project-title {
-  z-index: 1;
-  color: white;
-  font-size: 3vw;
-  font-family: 'Ssf4Abuket-7AVD';
-  align-self: end;
-  justify-self: left;
-  grid-column-start: 2;
-  grid-column-end: 3;
-  grid-row-start: 2;
-}
-/* .page-title {
-  z-index: 1;
-  grid-column: 3;
-  grid-row: 1;
-  justify-self: right;
-  padding-right: 2%;
-  color: white;
-  font-size: 7vh;
-  font-family: 'Ssf4Abuket-7AVD';
-} */
-
-h1, .my-description {
+h1 {
   text-shadow: 0px 0px 10px #FF0000;
 }
 
 /* --------------------------------------------------- */
 /* CONTAINERS */
-.project-container {
-  z-index: 1;
-  grid-column: 2 / 4;
-  grid-row-start: 3;
-  /* justify-self: center; */
-  width: 40%
-}
-
-.bio {
-  display: grid;
-  /* width: 70%; */
-  height: 100%;
-  justify-self: center;
-  grid-template-columns: 25% 75% ;
-  grid-column-start: 1;
-  grid-column-end: 3;
-  grid-row-start: 1;
-  grid-row-end: 3;
-  color: black;
-  background-color: white;
-  border: 2px solid white;
-  border-radius: 10px;
-  margin: 2em;
-
-  animation-name: fadeInLeft;
-  animation-duration: 1s;
-}
-.bio-img {
-  border-top-left-radius: 10px;
-  border-bottom-left-radius: 10px;
-  height: 100%;
-}
-
-.more-info {
-  display: grid;
-  width: 95%;
-  grid-template-columns: 1fr 1fr ;
-  grid-template-rows: 20% 1fr;
-  /* padding-left: 2em; */
-}
-
-.movelist {
-  justify-self: center;
-
-  grid-column-start: 1;
-  grid-column-end: 3;
-  height: 70%;
-}
-
-.about-me {
-  grid-column: 1 / 3;
-  font-family: 'Helvetica Neue';
-}
-
-.specials {
-  /* color: white;
-  background-color: black;
-  transform-origin: 0 0;
-  width: 10em;
-  height:2em;
-  align-self: end;
-  grid-column: 1;
-  grid-row: 1 / 4;
-  transform: rotate(-90deg);
-  position: absolute;
-  top: 0;
-  left: 0; */
-}
-
-/* .special-moves {
-  display: grid;
-  grid-template-columns: 10% 90%;
-  grid-template-rows: 1fr 1fr 1fr;
-} */
-
-.special-move {
-  border: 2px solid black;
-  margin: 0;
-  padding: 0.5em;
-}
-
-
-
-.description {
-  grid-column-start: 1;
-  grid-column-end: 3;
-  grid-row-start: 2;
-  padding-left: 10%;
-  color: white;
-  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.712) , rgba(255, 255, 255, 0));
-  text-shadow: 2px 2px #000000;
-  font-size: 2vw;
-  animation-name: fadeInUp;
-  animation-duration: 1s;
-  font-family: 'Helvetica Neue';
-}
-
-.skill-description {
-  grid-column: 1 / 4;
-  grid-row: 3;
-  width: 50%;
-  /* margin-top: 2%;
-  padding-left: 10%;
-  padding-top: 4%;
-  padding-bottom: 4%; */
-  justify-self: center;
-  color: white;
-  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.712) , rgba(255, 255, 255, 0));
-  font-size: 2vh;
-  font-family: 'Helvetica Neue';
-}
 
 .back-home {
   z-index: 2;
@@ -310,90 +79,7 @@ h1, .my-description {
   animation: pulse-red 1s infinite;
 }
 
-.icons { 
-  color: white;
-  justify-self: center;
-  grid-column: 2;
-  grid-row-start: 2;
-  width: 90%;
-  padding: 2%;
-}
 
-.fab {
-  font-size: 4vw;
-  margin: 1%;
-  padding: 1%;
-  border: 2px solid rgb(19, 57, 141);
-  border-radius: 25%;
-}
-
-.fab:hover {
-  border: 2px solid rgb(19, 57, 141);
-  animation: pulse-blue-2 1s infinite;
-}
-
-
-/* CHARACTER SELECT */
-.character {
-  z-index: 1;
-  margin: 1%;
-  border: 2px solid rgb(255, 255, 255);
-  border-radius: 50%;
-  width: 15%;
-}
-
-.character:hover {
-  border: 2px solid rgb(19, 57, 141);
-  animation: pulse-blue 1s infinite;
-}
-
-
-.char-portrait {
-  z-index: 0;
-  grid-column: 1 / 4;
-  grid-row: 1 / 4;
-  align-self: end;
-  height: 90%;
-  animation-name: fadeInRight;
-  animation-duration: 0.75s;
-}
-
-.project-video {
-  z-index: 4;  
-  grid-column: 3;
-  grid-row-start: 3;
-  justify-self: center;
-  animation-name: fadeInUp;
-  animation-duration: 0.75s;
-  border: 2px solid yellow;
-  border-radius: 10px;
-  box-shadow: 0px 0px 3px 6px red;
-}
-
-video {
-  border-radius: 10px;
-}
-
-.popup-content {
-  background: none !important;
-  border: none !important;
-  width: 60% !important; 
-  
-}
-.caption {
-  text-align: center;
-  color: white;
-  padding: 2%;
-  background-color: red;
-  border-radius: 10px;
-  font-family: 'Helvetica Neue';
-}
-
-.video-preview {
-  display: flex;
-  flex-direction: column;
-  margin: auto;
-}
 
 /* KEYFRAMES */
 
@@ -443,16 +129,6 @@ video {
     /* box-shadow: 0 0 0 10px rgba(19, 58, 141, 0); */
     border: 2px solid rgb(255, 255, 255);
 	}
-}
-
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 1;
-  }
 }
 
 @keyframes fadeInUp {

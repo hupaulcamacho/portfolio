@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
-
+import '../CSS/Skills.css'
 class Skills extends Component {
     state = {
         title: '',
