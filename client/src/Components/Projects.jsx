@@ -3,24 +3,26 @@ import { Link } from 'react-router-dom';
 import ReactPlayer from 'react-player'
 import Popup from "reactjs-popup";
 
-import handmedown from '../Assets/handmedown.png'
-import handmedownV from '../Assets/handmedown720.mov'
+import handmedown from '../Assets/handmedown.png';
+import handmedownV from '../Assets/handmedown720.mov';
 
-import watchlist from '../Assets/watchlist.png'
-import watchlistV from '../Assets/watchlist720.mov'
+import watchlist from '../Assets/watchlist.png';
+import watchlistV from '../Assets/watchlist720.mov';
 
-import remotetheater from '../Assets/remotetheater.png'
-import remotetheaterV from '../Assets/remotetheater.mov'
+import remotetheater from '../Assets/remotetheater.png';
+import remotetheaterV from '../Assets/remotetheater.mov';
 
-import behance from '../Assets/behance.png'
-import ryu from '../Assets/ryu_char_select.png'
-import ken from '../Assets/ken_char_select.png'
-import bison from '../Assets/bison_char_select.png'
+import behance from '../Assets/behance.png';
+import ryu from '../Assets/ryu_char_select.png';
+import ken from '../Assets/ken_char_select.png';
+import bison from '../Assets/bison_char_select.png';
+
+import '../CSS/Projects.css'
 
 const projects = [
     {
         title: 'Hand Me Down',
-        description: 'A social media engagement project to promote sustainablity in the fashion industry',
+        description: 'A social media engagement project to promote sustainablity in the fashion industry. Utilizes QR codes to allow users to save stories of their memories made while wearing a piece of clothing, before handing that clothing down to someone else or donating it. ',
         imgUrl: handmedown,
         videoURL: handmedownV,
         repo: 'https://github.com/PeterFiorentino/HandMeDown',
@@ -46,17 +48,17 @@ const projects = [
 
 class Projects extends Component {
     state = {
-        title: '',
-        description: '',
-        selectedCharacter: null,
-        videoURL: null,
+        title: 'Hand Me Down',
+        description: projects[0].description,
+        selectedCharacter: ryu,
+        videoURL: projects[0].videoURL,
         characters: {
             ryu: ryu,
             ken: ken,
             bison: bison
         },
-        repoURL: null,
-        liveURL: null
+        repoURL: projects[0].repo,
+        liveURL: projects[0].live
     }
     handleMouseOver = (e) => {
         e.preventDefault()
@@ -102,7 +104,7 @@ class Projects extends Component {
     renderVid = () =>  {
         const { videoURL, title, description, repoURL, liveURL } = this.state
         return <Popup trigger={
-            <ReactPlayer key={title} className='project-video' width='90%' height='90%' url={videoURL} playing />
+            <ReactPlayer key={title} className='project-video' url={videoURL} playing />
         } modal closeOnDocumentClick>
       
             <ReactPlayer key={title} className='video-preview' width='90%' height='90%' url={videoURL} playing />
@@ -110,10 +112,10 @@ class Projects extends Component {
                 {description}
                 <div>
                     <a href={repoURL} target="_blank">
-                        <button>Repo</button>
+                        <button className='repo'>Repo</button>
                     </a>
                     <a href={liveURL}target="_blank">
-                        <button>Live</button>
+                        <button className='live'>Live</button>
                     </a>
                 </div>
             </div>
@@ -139,7 +141,7 @@ class Projects extends Component {
                     <div className='project-container'>
                         {projectElements}
                     </div>
-                    <div className='back-home'>
+                    <div className='back-home-projects'>
                         <Link to='/'>Back to Home</Link>
                     </div>
                     
@@ -152,7 +154,7 @@ class Projects extends Component {
                     <div className='project-container'>
                         {projectElements}
                     </div>
-                    <div className='back-home'>
+                    <div className='back-home-projects'>
                         <Link to='/'>Back to Home</Link>
                     </div>
                 </div>
