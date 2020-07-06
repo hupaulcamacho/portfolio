@@ -25,23 +25,31 @@
 }
 
 .project-title {
+    /* margin-left: 2em; */
+    /* padding: 2em; */
     z-index: 3;
     color: white;
     font-size: 3vw;
     font-family: 'Ssf4Abuket-7AVD';
-    align-self: end;
+    align-self: center;
     justify-self: left;
-    grid-column-start: 2;
-    grid-column-end: 3;
-    grid-row-start: 2;
+    grid-column: 2 / 4;
+    grid-row: 2 / 4;
 }
 
 .project-container {
-    z-index: 1;
+    margin-top: 10em;
+    /* position: fixed; */
+    /* align-self: end; */
+    /* padding: 2em; */
+    justify-self: left;
+    align-self: center;
+
+    z-index: 3;
     grid-column: 2 / 4;
-    grid-row-start: 3;
+    grid-row: 2 / 4;
     /* justify-self: center; */
-    width: 40%
+    width: 40%;
 }
 
 .character {
@@ -49,7 +57,7 @@
     margin: 1%;
     border: 2px solid rgb(255, 255, 255);
     border-radius: 50%;
-    width: 15%;
+    width: 5vw;
 }
   
 .character:hover {
@@ -62,22 +70,25 @@
     grid-column: 1 / 4;
     grid-row: 1 / 4;
     align-self: end;
-    height: 90%;
+    height: 90vh;
     animation-name: fadeInRight;
     animation-duration: 0.75s;
 }
 
 .project-video {
-    z-index: 2;  
-    grid-column: 3 / 4;
-    grid-row-start: 2;
-    margin: 2em;
-    justify-self: center;
+    z-index: 1;  
+    grid-column: 2 / 4;
+    grid-row: 1 / 4;
+    margin-bottom: 7em;
+    /* margin: 2em; */
+    width: 60%;
+    justify-self: end;
+    align-self: end;
     animation-name: fadeInUp;
     animation-duration: 0.75s;
-    border: 2px solid yellow;
+    /* border: 2px solid yellow;
     border-radius: 10px;
-    box-shadow: 0px 0px 3px 6px red;
+    box-shadow: 0px 0px 3px 6px red; */
 }
 
 .repo, .live {
@@ -103,13 +114,15 @@ video {
     text-align: center;
     color: white;
     padding: 2%;
-    background-color: red;
+    background-color: rgba(255, 0, 0, 0.596);
     border-radius: 10px;
-    font-family: 'Helvetica Neue';
+    font-family: 'Roboto';
 }
   
 .video-preview {
     display: flex;
+    width: 100%!important;
+    height: 70%!important;
     flex-direction: column;
     margin: auto;
 }
@@ -169,3 +182,15 @@ video {
     background-color: rgba(255, 0, 0, 0);
 	}
 }
+
+@keyframes fadeInRight {
+    0% {
+      opacity: 0;
+      transform: translate3d(100%, 0, 0);
+    }
+  
+    100% {
+      opacity: 1;
+      transform: none;
+    }
+  }

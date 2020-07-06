@@ -12,7 +12,6 @@ import watchlistV from '../Assets/watchlist720.mov';
 import remotetheater from '../Assets/remotetheater.png';
 import remotetheaterV from '../Assets/remotetheater.mov';
 
-import behance from '../Assets/behance.png';
 import ryu from '../Assets/ryu_char_select.png';
 import ken from '../Assets/ken_char_select.png';
 import bison from '../Assets/bison_char_select.png';
@@ -25,7 +24,7 @@ const projects = [
         description: 'A social media engagement project to promote sustainablity in the fashion industry. Utilizes QR codes to allow users to save stories of their memories made while wearing a piece of clothing, before handing that clothing down to someone else or donating it. ',
         imgUrl: handmedown,
         videoURL: handmedownV,
-        repo: 'https://github.com/PeterFiorentino/HandMeDown',
+        repo: 'https://github.com/hupaulcamacho/HandMeDown',
         live: 'https://handmedown.herokuapp.com/'
     },
     {
@@ -65,7 +64,7 @@ class Projects extends Component {
         const { characters } = this.state
         const imageName = e.target.dataset.name
         console.log(imageName)
-        if(imageName === 'Hand Me Down') {
+        if (imageName === 'Hand Me Down') {
             this.setState({
                 title: imageName,
                 description: projects[0].description,
@@ -75,7 +74,7 @@ class Projects extends Component {
                 liveURL: projects[0].live
             })
         }
-        if(imageName === 'Watchlist') {
+        if (imageName === 'Watchlist') {
             this.setState({
                 title: imageName,
                 description: projects[1].description,
@@ -84,7 +83,7 @@ class Projects extends Component {
                 repoURL: projects[1].repo
             })
         }
-        if(imageName === 'Remote Theater') {
+        if (imageName === 'Remote Theater') {
             this.setState({
                 title: imageName,
                 description: projects[2].description,
@@ -101,30 +100,30 @@ class Projects extends Component {
         return <img key={selectedCharacter} className='char-portrait' src={selectedCharacter} />
     }
 
-    renderVid = () =>  {
+    renderVid = () => {
         const { videoURL, title, description, repoURL, liveURL } = this.state
         return <Popup trigger={
             <ReactPlayer key={title} className='project-video' url={videoURL} playing />
         } modal closeOnDocumentClick>
-      
-            <ReactPlayer key={title} className='video-preview' width='90%' height='90%' url={videoURL} playing />
+
+            <ReactPlayer key={title} className='video-preview' url={videoURL} playing />
             <div className='caption'>
                 {description}
                 <div>
                     <a href={repoURL} target="_blank">
                         <button className='repo'>Repo</button>
                     </a>
-                    <a href={liveURL}target="_blank">
+                    <a href={liveURL} target="_blank">
                         <button className='live'>Live</button>
                     </a>
                 </div>
             </div>
-            
+
         </Popup>
     }
 
     render() {
-        const { title, selectedCharacter, videoURL } = this.state
+        const { title, selectedCharacter, videoURL, description, repoURL, liveURL } = this.state
         const projectElements = []
         projects.forEach(project => {
             projectElements.push(
@@ -134,31 +133,44 @@ class Projects extends Component {
         return (
             <div>
                 {selectedCharacter ? (
-                <div className='project-main'>
-                    <h1 className='projects-select'>Projects Select</h1>
-                    <h1 className='project-title'>{title}</h1>
-                    {this.renderImg()}
-                    <div className='project-container'>
-                        {projectElements}
+                    <div className='project-main'>
+                        <h1 className='projects-select'>Projects Select</h1>
+                        <h1 className='project-title'>{title}</h1>
+                        {this.renderImg()}
+                        <div className='project-container'>
+                            {projectElements}
+                        </div>
+                        <div className='back-home-projects'>
+                            <Link to='/'>Back to Home</Link>
+                        </div>
+
+                        <div className='project-video'>
+                            <ReactPlayer key={title} className='video-preview' url={videoURL} playing />
+                            <div className='caption'>
+                                {description}
+                                <div>
+                                    <a href={repoURL} target="_blank">
+                                        <button className='repo'>Repo</button>
+                                    </a>
+                                    <a href={liveURL} target="_blank">
+                                        <button className='live'>Live</button>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div className='back-home-projects'>
-                        <Link to='/'>Back to Home</Link>
-                    </div>
-                    
-                    {this.renderVid()}
-                </div>
                 ) : (
-                <div className='project-main'>
-                    <h1 className='projects-select'>Projects Select</h1>
-                    <h1 className='project-title'>{title}</h1>
-                    <div className='project-container'>
-                        {projectElements}
-                    </div>
-                    <div className='back-home-projects'>
-                        <Link to='/'>Back to Home</Link>
-                    </div>
-                </div>
-                )}
+                        <div className='project-main'>
+                            <h1 className='projects-select'>Projects Select</h1>
+                            <h1 className='project-title'>{title}</h1>
+                            <div className='project-container'>
+                                {projectElements}
+                            </div>
+                            <div className='back-home-projects'>
+                                <Link to='/'>Back to Home</Link>
+                            </div>
+                        </div>
+                    )}
             </div>
         )
     }

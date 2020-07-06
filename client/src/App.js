@@ -11,7 +11,7 @@ import Contact from './Components/Contact';
 
 class App extends Component {
   state = {
-    description: ''
+    description: 'A collection of collaborative web applications and personal projects that I have developed.'
   }
 
   handleMouseOverChange = (e) => {
@@ -20,7 +20,7 @@ class App extends Component {
     console.log(word)
     if (word === 'PROJECTS') {
       this.setState({
-        description: 'A collection of my created web applications and projects that I have worked on.'
+        description: 'A collection of collaborative web applications and personal projects that I have developed.'
       })
     }
     if (word === 'ABOUT ME') {
@@ -40,11 +40,11 @@ class App extends Component {
     }
   }
 
-  clearDescription = () => {
-    this.setState({
-      description: ''
-    })
-  }
+  // clearDescription = () => {
+  //   this.setState({
+  //     description: ''
+  //   })
+  // }
   renderHome = () => {
     const { description } = this.state
     return <Home 

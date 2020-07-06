@@ -69,7 +69,7 @@ class Skills extends Component {
                 <div className='skill-description'>
                     {description}
                 </div>
-                <div className='back-home'>
+                <div className='back-home-skills'>
                     <Link to='/'>Back to Home</Link>
                 </div>
             </div>

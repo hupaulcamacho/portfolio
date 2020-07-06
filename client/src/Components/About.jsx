@@ -4,6 +4,7 @@ import huey from '../Assets/huey.jpg'
 import github from '../Assets/github.png'
 import linkedin from '../Assets/linkedin.png'
 import movelist from '../Assets/movelist.jpg'
+
 import '../CSS/About.css'
 
 const stats = {
@@ -35,7 +36,7 @@ class About extends Component {
                 {/* <h3 className='char-name'>Hupaul</h3>
                 <h4 className='char-title'>The Web Dev</h4> */}
                 <h1 className='page-title'>About Me</h1>
-                <div className='back-home'>
+                <div className='back-home-about'>
                     <Link to='/'>Back to Home</Link>
                 </div>
                 <div className="bio">
@@ -59,6 +60,7 @@ class About extends Component {
                         
 
                     </div>
+                    
                 </div>
             </div>
         )
