@@ -1,5 +1,5 @@
 # Full Stack Web Porfolio
-*Taking inspiration from the user interface of Street Fighter IV, this site showcases some of my development work and technical skills while staying faithful to the iconic layout.*
+*Taking inspiration from the game interface of Street Fighter IV, this site showcases some of my development work and technical skills while staying faithful to the iconic layout.*
 
 The site is hosted on netlify at [hupaulcamacho.dev](https://hupaulcamacho.dev/)
 
