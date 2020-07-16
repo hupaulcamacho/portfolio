@@ -7,7 +7,6 @@ import Home from './Components/Home'
 import About from './Components/About'
 import Projects from './Components/Projects'
 import Skills from './Components/Skills'
-import Contact from './Components/Contact';
 import StreetFighter from './Game/StreetFighter';
 
 class App extends Component {
@@ -41,11 +40,6 @@ class App extends Component {
     }
   }
 
-  // clearDescription = () => {
-  //   this.setState({
-  //     description: ''
-  //   })
-  // }
   renderHome = () => {
     const { description } = this.state
     return <Home 
@@ -60,7 +54,6 @@ class App extends Component {
         <div className="App">
           <Switch>
             <Route path='/StreetFighter' component={StreetFighter} />
-            <Route path='/contact' component={Contact} />
             <Route path='/skills' component={Skills} />
             <Route exact path='/projects/:projectname' component={Projects} />
             <Route path='/projects' component={Projects} />

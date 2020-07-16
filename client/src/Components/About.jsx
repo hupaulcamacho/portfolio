@@ -32,8 +32,6 @@ class About extends Component {
         )
         return (
             <div className='about-main'>
-                {/* <h3 className='char-name'>Hupaul</h3>
-                <h4 className='char-title'>The Web Dev</h4> */}
                 <h1 className='page-title'>About Me</h1>
                 <div className='back-home-about'>
                     <Link to='/'>Back to Home</Link>

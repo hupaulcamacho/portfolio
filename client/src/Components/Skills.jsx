@@ -1,57 +1,45 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import '../CSS/Skills.css'
+
+const descriptions = {
+    'react': {
+        text: 'React is a JavaScript library for building user interfaces. It is maintained by Facebook and a community of individual developers and companies. React can be used as a base in the development of single-page or mobile applications.'
+    },
+    'js': {
+        text: 'JavaScript, often abbreviated as JS, is a programming language that conforms to the ECMAScript specification. JavaScript is high-level, often just-in-time compiled, and multi-paradigm. It has curly-bracket syntax, dynamic typing, prototype-based object-orientation, and first-class functions.'
+    },
+    'html': {
+        text: 'Hypertext Markup Language is the standard markup language for documents designed to be displayed in a web browser. It can be assisted by technologies such as Cascading Style Sheets and scripting languages such as JavaScript.'
+    },
+    'css': {
+        text: 'Cascading Style Sheets is a style sheet language used for describing the presentation of a document written in a markup language like HTML. CSS is a cornerstone technology of the World Wide Web, alongside HTML and JavaScript.'
+    },
+    'github': {
+        text: 'GitHub, Inc. is a US-based global company that provides hosting for software development version control using Git. It is a subsidiary of Microsoft, which acquired the company in 2018 for US$7.5 billion. It offers the distributed version control and source code management functionality of Git, plus its own features.'
+    },
+    'adobe': {
+        text: 'Adobe Inc., known until October 3, 2018 as Adobe Systems Incorporated, is an American multinational computer software company headquartered in San Jose, California. It has historically focused upon the creation of multimedia and creativity software products, with a more recent foray towards digital marketing software.'
+    },
+    'git': {
+        text: 'Git is a distributed version-control system for tracking changes in source code during software development. It is designed for coordinating work among programmers, but it can be used to track changes in any set of files. Its goals include speed, data integrity, and support for distributed, non-linear workflows.'
+    }
+}
+
 class Skills extends Component {
     state = {
-        title: '',
         description: ''
     }
 
     handleMouseOver = (e) => {
         e.preventDefault()
         const imageName = e.target.dataset.name
-        console.log(imageName)
-        if(imageName === 'react') {
-            this.setState({
-                description: 'React is a JavaScript library for building user interfaces. It is maintained by Facebook and a community of individual developers and companies. React can be used as a base in the development of single-page or mobile applications.'
-            })
-        }
-        if(imageName === 'js') {
-            this.setState({
-                description: 'JavaScript, often abbreviated as JS, is a programming language that conforms to the ECMAScript specification. JavaScript is high-level, often just-in-time compiled, and multi-paradigm. It has curly-bracket syntax, dynamic typing, prototype-based object-orientation, and first-class functions.'
-            })
-        }
-        if(imageName === 'html') {
-            this.setState({
-                description: 'Hypertext Markup Language is the standard markup language for documents designed to be displayed in a web browser. It can be assisted by technologies such as Cascading Style Sheets and scripting languages such as JavaScript.'
-            })
-        }
-        if(imageName === 'css') {
-            this.setState({
-                description: 'Cascading Style Sheets is a style sheet language used for describing the presentation of a document written in a markup language like HTML. CSS is a cornerstone technology of the World Wide Web, alongside HTML and JavaScript.'
-            })
-        }
-        if(imageName === 'github') {
-            this.setState({
-                description: 'GitHub, Inc. is a US-based global company that provides hosting for software development version control using Git. It is a subsidiary of Microsoft, which acquired the company in 2018 for US$7.5 billion. It offers the distributed version control and source code management functionality of Git, plus its own features.'
-            })
-        }
-        if(imageName === 'adobe') {
-            this.setState({
-                description: 'Adobe Inc., known until October 3, 2018 as Adobe Systems Incorporated, is an American multinational computer software company headquartered in San Jose, California. It has historically focused upon the creation of multimedia and creativity software products, with a more recent foray towards digital marketing software.'
-            })
-        }
-        if(imageName === 'git') {
-            this.setState({
-                description: 'Git is a distributed version-control system for tracking changes in source code during software development. It is designed for coordinating work among programmers, but it can be used to track changes in any set of files. Its goals include speed, data integrity, and support for distributed, non-linear workflows.'
-            })
-        }
-    }
-    handleMouseOut = () => {
+        
         this.setState({
-            description: ''
+            description: descriptions[imageName].text
         })
     }
+
     render() {
         const { description } = this.state
         return (
