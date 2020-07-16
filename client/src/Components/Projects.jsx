@@ -69,7 +69,6 @@ class Projects extends Component {
 
     render() {
         const { title, selectedCharacter, videoURL, description, repoURL, liveURL, project } = this.state
-        
         return (
             <div className='project-main'>
                 <h1 className='projects-select'>{project.title}</h1>
@@ -77,9 +76,24 @@ class Projects extends Component {
                 {this.renderImg()}
                 <div className='project-container'>
                     [
-                        <img onMouseOver={this.handleMouseOver} className='character' src={projects['Hand Me Down'].imgUrl} data-name={projects['Hand Me Down'].title} />,
-                        <img onMouseOver={this.handleMouseOver} className='character' src={projects['Watchlist'].imgUrl} data-name={projects['Watchlist'].title} />,
-                        <img onMouseOver={this.handleMouseOver} className='character' src={projects['Remote Theater'].imgUrl} data-name={projects['Remote Theater'].title} />,
+                        <img 
+                            onMouseOver={this.handleMouseOver} 
+                            className='character' 
+                            src={projects['Hand Me Down'].imgUrl} 
+                            data-name={projects['Hand Me Down'].title} 
+                        />,
+                        <img 
+                            onMouseOver={this.handleMouseOver} 
+                            className='character' 
+                            src={projects['Watchlist'].imgUrl} 
+                            data-name={projects['Watchlist'].title} 
+                        />,
+                        <img 
+                            onMouseOver={this.handleMouseOver} 
+                            className='character' 
+                            src={projects['Remote Theater'].imgUrl} 
+                            data-name={projects['Remote Theater'].title} 
+                        />,
                     ]
                 </div>
                 <div className='back-home-projects'>
