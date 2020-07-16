@@ -22,9 +22,9 @@ class NavBar extends Component {
                             SKILLS
                         </div>
                     </Link>
-                    {/* <Link value='contact' onMouseOver={this.props.handleChange} onMouseOut={this.props.clearDescription} to='/contact'>
-                        <div className='selection' onMouseOver={this.props.handleChange} onMouseOut={this.props.clearDescription} value='contact' >
-                            CONTACT
+                    {/* <Link value='street-fighter' onMouseOver={this.props.handleChange} onMouseOut={this.props.clearDescription} to='/StreetFighter'>
+                        <div className='selection' onMouseOver={this.props.handleChange} onMouseOut={this.props.clearDescription} value='street-fighter' >
+                            STREET FIGHTER?
                         </div>
                     </Link> */}
                 </nav>

@@ -26,20 +26,28 @@
 }
 
 .icons { 
+    /* align-self: center; */
+    text-align: center;
+    display: flex;
     color: white;
     justify-self: center;
-    grid-column: 2;
+    grid-column: 1 / 4;
     grid-row-start: 2;
-    width: 90%;
-    /* padding: 2%; */
+    /* width: 90%; */
+    padding: 2%;
+    margin: 2em;
 }
-  
+.icon-holder {
+    margin: 1em;
+    text-align: center;
+}
+
 .fab {
     text-align: center;
     font-size: 4vw;
     margin: 1%;
     width: 1em;
-    padding: 1%;
+    padding: 0.25em;
     border: 2px solid rgb(19, 57, 141);
     border-radius: 25%;
 }
@@ -68,6 +76,7 @@
     background-color: red;
     animation: pulse-red 1s infinite;
 }
+
 
 @keyframes pulse-red {
 	0% {

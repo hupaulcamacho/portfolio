@@ -8,6 +8,7 @@ import About from './Components/About'
 import Projects from './Components/Projects'
 import Skills from './Components/Skills'
 import Contact from './Components/Contact';
+import StreetFighter from './Game/StreetFighter';
 
 class App extends Component {
   state = {
@@ -33,9 +34,9 @@ class App extends Component {
         description: 'Programming languages and skills I have learned and mastered.'
       })
     }
-    if (word === 'CONTACT') {
+    if (word === 'STREET FIGHTER?') {
       this.setState({
-        description: 'Contact and follow me through various social media platforms.'
+        description: "What's this?"
       })
     }
   }
@@ -58,6 +59,7 @@ class App extends Component {
     return (
         <div className="App">
           <Switch>
+            <Route path='/StreetFighter' component={StreetFighter} />
             <Route path='/contact' component={Contact} />
             <Route path='/skills' component={Skills} />
             <Route exact path='/projects/:projectname' component={Projects} />

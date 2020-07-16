@@ -58,13 +58,34 @@ class Skills extends Component {
             <div className='skills-main'>
                 <h1 className='page-title'>Skills</h1>
                 <div className='icons'>
-                    <i className='icon' key='react' onMouseOver={this.handleMouseOver} data-name='react' class="fab fa-react" ></i>
-                    <i className='icon' key='js' onMouseOver={this.handleMouseOver} data-name='js' class="fab fa-js-square"></i>
-                    <i className='icon' key='html' onMouseOver={this.handleMouseOver} data-name='html' class="fab fa-html5"></i>
-                    <i className='icon' key='css' onMouseOver={this.handleMouseOver} data-name='css' class="fab fa-css3-alt"></i>
-                    <i className='icon' key='github' onMouseOver={this.handleMouseOver} data-name='github' class="fab fa-github"></i>
-                    <i className='icon' key='adobe' onMouseOver={this.handleMouseOver} data-name='adobe' class="fab fa-adobe"></i>
-                    <i className='icon' key='git' onMouseOver={this.handleMouseOver} data-name='git' class="fab fa-git-alt"></i>
+                    <div className='icon-holder'>
+                        <i className='icon' key='react' onMouseOver={this.handleMouseOver} data-name='react' class="fab fa-react" ></i>
+                        React
+                    </div>
+                    <div className='icon-holder'>
+                        <i className='icon' key='js' onMouseOver={this.handleMouseOver} data-name='js' class="fab fa-js-square"></i>
+                        Javascript
+                    </div>
+                    <div className='icon-holder'>
+                        <i className='icon' key='html' onMouseOver={this.handleMouseOver} data-name='html' class="fab fa-html5"></i>
+                        HTML
+                    </div>
+                    <div className='icon-holder'>
+                        <i className='icon' key='css' onMouseOver={this.handleMouseOver} data-name='css' class="fab fa-css3-alt"></i>
+                        CSS
+                    </div>
+                    <div className='icon-holder'>
+                        <i className='icon' key='github' onMouseOver={this.handleMouseOver} data-name='github' class="fab fa-github"></i>
+                        Github
+                    </div>
+                    <div className='icon-holder'>
+                        <i className='icon' key='adobe' onMouseOver={this.handleMouseOver} data-name='adobe' class="fab fa-adobe"></i>
+                        Adobe
+                    </div>
+                    <div className='icon-holder'>
+                        <i className='icon' key='git' onMouseOver={this.handleMouseOver} data-name='git' class="fab fa-git-alt"></i>
+                        Git
+                    </div>
                 </div>
                 <div className='skill-description'>
                     {description}

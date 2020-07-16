@@ -85,13 +85,14 @@
     padding-left: 5%;
     padding-right: 5%;
     font-family: 'Ssf4Abuket-7AVD';
+    &:hover {
+        /* background: linear-gradient(to right, red , rgba(255, 255, 255, 0)); */
+        background-color: red;
+        animation: pulse-red 1s infinite;
+    }
 }
 
-.back-home-about:hover {
-    /* background: linear-gradient(to right, red , rgba(255, 255, 255, 0)); */
-    background-color: red;
-    animation: pulse-red 1s infinite;
-}
+
 
 @keyframes fadeIn {
     0% {

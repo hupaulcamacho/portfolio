@@ -5,7 +5,7 @@ import github from '../Assets/github.png'
 import linkedin from '../Assets/linkedin.png'
 import movelist from '../Assets/movelist.jpg'
 
-import '../CSS/About.css'
+import '../CSS/About.scss'
 
 const stats = {
     name: 'Hupaul Camacho',
@@ -23,7 +23,6 @@ const stats = {
         }
     ]
 }
-console.log()
 
 class About extends Component {
     
@@ -50,17 +49,13 @@ class About extends Component {
                                 <span className='link'>/hupaulcamacho</span>
                             </div>
                         </a>
-                        
                         <a href='https://www.linkedin.com/in/hupaulcamacho'>
                             <div>
                                 <img className='in' src={linkedin}/>
                                 <span className='link'>/hupaulcamacho</span>
                             </div>
                         </a>
-                        
-
                     </div>
-                    
                 </div>
             </div>
         )
