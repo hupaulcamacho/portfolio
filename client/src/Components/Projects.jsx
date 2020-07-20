@@ -10,7 +10,7 @@ import watchlist from '../Assets/watchlist.png';
 import watchlistV from '../Assets/watchlist720.mov';
 
 import remotetheater from '../Assets/remotetheater.png';
-import remotetheaterV from '../Assets/remotetheater.mov';
+import remotetheaterV from '../Assets/remotetheater720.mov';
 
 import ryu from '../Assets/ryu_char_select.png';
 import ken from '../Assets/ken_char_select.png';
