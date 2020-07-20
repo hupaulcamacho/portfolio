@@ -68,7 +68,7 @@ class Projects extends Component {
     }
 
     render() {
-        const { title, selectedCharacter, videoURL, description, repoURL, liveURL, project } = this.state
+        const { project } = this.state
         return (
             <div className='project-main'>
                 <h1 className='projects-select'>{project.title}</h1>

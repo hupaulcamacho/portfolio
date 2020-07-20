@@ -28,7 +28,7 @@ const descriptions = {
 
 class Skills extends Component {
     state = {
-        description: ''
+        description: 'Select an option'
     }
 
     handleMouseOver = (e) => {

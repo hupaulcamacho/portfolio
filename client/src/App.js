@@ -9,35 +9,31 @@ import Projects from './Components/Projects'
 import Skills from './Components/Skills'
 import StreetFighter from './Game/StreetFighter';
 
+const descriptions = {
+  'PROJECTS': {
+      text: 'A collection of collaborative web applications and personal projects that I have developed.'
+  },
+  'ABOUT ME': {
+      text: 'Who I am and where I come from.'
+  },
+  'SKILLS': {
+      text: 'Programming languages and skills I have learned and mastered.'
+  },
+  'STREET FIGHTER': {
+      text: "What's this?"
+  }
+}
+
 class App extends Component {
   state = {
-    description: 'A collection of collaborative web applications and personal projects that I have developed.'
+    description: 'Choose an option...'
   }
 
   handleMouseOverChange = (e) => {
     e.preventDefault()
-    const word = e.target.innerText
-    console.log(word)
-    if (word === 'PROJECTS') {
-      this.setState({
-        description: 'A collection of collaborative web applications and personal projects that I have developed.'
-      })
-    }
-    if (word === 'ABOUT ME') {
-      this.setState({
-        description: 'Who I am and where I come from.'
-      })
-    }
-    if (word === 'SKILLS') {
-      this.setState({
-        description: 'Programming languages and skills I have learned and mastered.'
-      })
-    }
-    if (word === 'STREET FIGHTER?') {
-      this.setState({
-        description: "What's this?"
-      })
-    }
+    const category = e.target.innerText
+    console.log(category)
+    this.setState({ description: descriptions[category].text })
   }
 
   renderHome = () => {
