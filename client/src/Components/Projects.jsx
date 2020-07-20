@@ -105,10 +105,10 @@ class Projects extends Component {
                     <div className='caption'>
                         {project.description}
                         <div>
-                            <a href={project.repoURL} target="_blank">
+                            <a href={project.repo} target="_blank">
                                 <button className='repo'>Repo</button>
                             </a>
-                            <a href={project.liveURL} target="_blank">
+                            <a href={project.live} target="_blank">
                                 <button className='live'>Live</button>
                             </a>
                         </div>
