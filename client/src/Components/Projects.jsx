@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import ReactPlayer from 'react-player'
-import Popup from "reactjs-popup";
+import ClipLoader from "react-spinners/ClipLoader";
+import { css } from "@emotion/core";
 
 import handmedown from '../Assets/handmedown.png';
 import handmedownV from '../Assets/handmedown720.mov';
@@ -48,6 +49,12 @@ const projects = {
     }
 }
 
+const override = css`
+  display: block;
+  margin: 0 auto;
+  border-color: red;
+`;
+
 class Projects extends Component {
     state = {
         project: projects['Hand Me Down'],
@@ -70,50 +77,61 @@ class Projects extends Component {
     render() {
         const { project } = this.state
         return (
+            
             <div className='project-main'>
-                <h1 className='projects-select'>{project.title}</h1>
-                <h1 className='project-title'>Select a Project</h1>
-                {this.renderImg()}
-                <div className='project-container'>
-                    [
-                        <img 
-                            onMouseOver={this.handleMouseOver} 
-                            className='character' 
-                            src={projects['Hand Me Down'].imgUrl} 
-                            data-name={projects['Hand Me Down'].title} 
-                        />,
-                        <img 
-                            onMouseOver={this.handleMouseOver} 
-                            className='character' 
-                            src={projects['Watchlist'].imgUrl} 
-                            data-name={projects['Watchlist'].title} 
-                        />,
-                        <img 
-                            onMouseOver={this.handleMouseOver} 
-                            className='character' 
-                            src={projects['Remote Theater'].imgUrl} 
-                            data-name={projects['Remote Theater'].title} 
-                        />,
-                    ]
+                {this.props.isloading
+                ?
+                <div className='spinner-div'>
+                    <ClipLoader css={override} size={150} color={"#123abc"} loading={this.props.isloading}/>
                 </div>
-                <div className='back-home-projects'>
-                    <Link to='/'>Back to Home</Link>
-                </div>
+                :
+                <>
+                    <h1 className='projects-select'>{project.title}</h1>
+                    <h1 className='project-title'>Select a Project</h1>
+                    {this.renderImg()}
+                    <div className='project-container'>
 
-                <div className='project-video'>
-                    <ReactPlayer key={project.title} className='video-preview' url={project.videoURL} playing />
-                    <div className='caption'>
-                        {project.description}
-                        <div>
-                            <a href={project.repo} target="_blank">
-                                <button className='repo'>Repo</button>
-                            </a>
-                            <a href={project.live} target="_blank">
-                                <button className='live'>Live</button>
-                            </a>
+                        <img
+                            onMouseOver={this.handleMouseOver}
+                            className='character'
+                            src={projects['Hand Me Down'].imgUrl}
+                            data-name={projects['Hand Me Down'].title}
+                        />
+                        <img
+                            onMouseOver={this.handleMouseOver}
+                            className='character'
+                            src={projects['Watchlist'].imgUrl}
+                            data-name={projects['Watchlist'].title}
+                        />
+                        <img
+                            onMouseOver={this.handleMouseOver}
+                            className='character'
+                            src={projects['Remote Theater'].imgUrl}
+                            data-name={projects['Remote Theater'].title}
+                        />
+
+                    </div>
+                    <div className='back-home-projects'>
+                        <Link to='/'>Back to Home</Link>
+                    </div>
+
+                    <div className='project-video'>
+                        <ReactPlayer key={project.title} className='video-preview' url={project.videoURL} playing />
+                        <div className='caption'>
+                            {project.description}
+                            <div>
+                                <a href={project.repo} target="_blank">
+                                    <button className='repo'>Repo</button>
+                                </a>
+                                <a href={project.live} target="_blank">
+                                    <button className='live'>Live</button>
+                                </a>
+                            </div>
                         </div>
                     </div>
-                </div>
+                </>
+                }
+                
             </div>
         )
     }
