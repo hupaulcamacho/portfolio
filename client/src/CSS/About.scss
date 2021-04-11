@@ -10,6 +10,57 @@
     animation-duration: 1s;
 }
 
+@media (max-width: 450px) {
+    .bio {
+        grid-row: 2 / 4!important;
+        grid-column: 1 / 4!important;
+        margin: 0.5em!important;
+        height: 70%!important;
+        width: 90%!important;
+    }
+
+    .bio-img {
+        grid-column: 1!important;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 0px!important;
+        height: 250px!important;
+    }
+
+    .movelist {
+        justify-self: left!important;
+        height: 138px!important;
+    }
+
+    .about-me {
+        margin-left: 1em;
+        width: 95%!important;
+        font-size: 12px;
+    }
+
+    .git, .in {
+        width: 20px!important;
+    }
+
+    .link {
+        color: black;
+        font-size: 10pt!important;
+        padding: 2px!important;
+    }
+    .links {
+        display: flex;
+        margin: auto;
+        grid-column: 1 / 4!important;
+    }
+    .link-info {
+        display: flex;
+    }
+
+    .back-home-about {
+        font-size: 14px!important;  
+        padding-top: 1em; 
+    }
+}
+
 .link {
     color: black;
     font-size: 24pt;
@@ -18,18 +69,18 @@
 
 .bio {
     display: grid;
-    /* width: 70%; */
+    width: 70%;
     height: 100%;
     margin-top: 5em;
     margin-left: 2em;
 
-    /* justify-self: center; */
+    justify-self: center;
     grid-template-columns: 25% 75% ;
     grid-column: 1 / 3;
     grid-row: 1 / 3;
     color: black;
     background-color: white;
-    border: 2px solid white;
+    // border: 2px solid white;
     border-radius: 10px;
   
     animation-name: fadeInLeft;
@@ -37,6 +88,7 @@
 }
 
 .bio-img {
+    // padding: 1em;
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
     height: 100%;
@@ -44,7 +96,7 @@
   
 .more-info {
     display: grid;
-    width: 95%;
+    // width: 95%;
     grid-template-columns: 1fr 1fr ;
     grid-template-rows: 20% 1fr;
     /* padding-left: 2em; */
@@ -54,7 +106,7 @@
     justify-self: center;
     grid-column-start: 1;
     grid-column-end: 3;
-    height: 65%;
+    height: 75%;
 }
 
 .about-me {
@@ -90,6 +142,13 @@
         background-color: red;
         animation: pulse-red 1s infinite;
     }
+}
+
+.links {
+    display: flex;
+}
+.link-info {
+    display: flex;
 }
 
 

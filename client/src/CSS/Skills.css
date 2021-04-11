@@ -1,5 +1,6 @@
 .skills-main {
     display: grid;
+    text-align: center;
     grid-template-columns: 1fr 50% 1fr;
     grid-template-rows: 1fr 1fr 1fr;
     width: 100%;
@@ -7,6 +8,26 @@
     background-size: cover;
     animation-name: fadeIn;
     animation-duration: 1s;
+}
+
+@media (max-width: 450px) {
+    .icons {
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    .icon-holder {
+        margin: 0.1em!important;
+    }
+    .skill-description {
+        font-size: 16px!important;
+        width: 350px!important;
+    }
+
+    .back-home-skills {
+        font-size: 14px!important;  
+        padding-top: 1em; 
+    }
+
 }
 
 .skill-description {

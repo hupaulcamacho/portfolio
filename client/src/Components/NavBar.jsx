@@ -12,7 +12,7 @@ class NavBar extends Component {
                             PROJECTS
                         </div>
                     </Link>
-                    <Link value='about' onMouseOver={this.props.handleChange} onMouseOut={this.props.clearDescription} to='/about'>
+                    {/* <Link value='about' onMouseOver={this.props.handleChange} onMouseOut={this.props.clearDescription} to='/about'>
                         <div className='selection' onMouseOver={this.props.handleChange} onMouseOut={this.props.clearDescription} value='about' >
                             ABOUT ME
                         </div>
@@ -21,7 +21,7 @@ class NavBar extends Component {
                         <div className='selection' onMouseOver={this.props.handleChange} onMouseOut={this.props.clearDescription} value='skills' >
                             SKILLS
                         </div>
-                    </Link>
+                    </Link> */}
                     {/* <Link value='street-fighter' onMouseOver={this.props.handleChange} onMouseOut={this.props.clearDescription} to='/StreetFighter'>
                         <div className='selection' onMouseOver={this.props.handleChange} onMouseOut={this.props.clearDescription} value='street-fighter' >
                             STREET FIGHTER?

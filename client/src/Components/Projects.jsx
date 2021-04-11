@@ -49,11 +49,6 @@ const projects = {
     }
 }
 
-const override = css`
-  display: block;
-  margin: 0 auto;
-  border-color: red;
-`;
 
 class Projects extends Component {
     state = {
@@ -76,13 +71,15 @@ class Projects extends Component {
 
     render() {
         const { project } = this.state
+        const isLoading = this.props.isLoading
+        console.log(isLoading)
         return (
             
             <div className='project-main'>
-                {this.props.isloading
+                {isLoading
                 ?
                 <div className='spinner-div'>
-                    <ClipLoader css={override} size={150} color={"#123abc"} loading={this.props.isloading}/>
+                    <span class='spinner'></span>
                 </div>
                 :
                 <>

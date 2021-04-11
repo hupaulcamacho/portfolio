@@ -39,16 +39,18 @@ class About extends Component {
                 <div className="bio">
                     <img className="bio-img" src={stats.character}/>
                     <div className="more-info">
-                        <div className='about-me'><p>{stats.profile}</p></div>
+                        <div className='about-me'>{stats.profile}</div>
                         <img className='movelist' src={movelist}/>
+                    </div>
+                    <div className='links'>
                         <a href='https://github.com/hupaulcamacho'>
-                            <div>
+                            <div className='link-info'>
                                 <img className='git' src={github}/>
                                 <span className='link'>/hupaulcamacho</span>
                             </div>
                         </a>
                         <a href='https://www.linkedin.com/in/hupaulcamacho'>
-                            <div>
+                            <div className='link-info'>
                                 <img className='in' src={linkedin}/>
                                 <span className='link'>/hupaulcamacho</span>
                             </div>
