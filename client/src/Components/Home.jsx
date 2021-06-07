@@ -10,6 +10,9 @@ const descriptions = {
     'ABOUT ME': {
         text: 'Who I am and where I come from.'
     },
+    'RESUME': {
+        text: 'A redirect to my current updated resume.'
+    },
     'SKILLS': {
         text: 'Programming languages and skills I have learned and mastered.'
     },

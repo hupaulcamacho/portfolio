@@ -12,6 +12,11 @@ class NavBar extends Component {
                             PROJECTS
                         </div>
                     </Link>
+                    <Link value='about' onMouseOver={this.props.handleChange} onMouseOut={this.props.clearDescription} to='https://docs.google.com/document/d/1z0NZ6Xm6dchSZrozSh9r75f6x8eK26pS7gdnN1fgMqc/edit?usp=sharing'>
+                        <div className='selection' onMouseOver={this.props.handleChange} onMouseOut={this.props.clearDescription} value='about' >
+                            RESUME
+                        </div>
+                    </Link>
                     {/* <Link value='about' onMouseOver={this.props.handleChange} onMouseOut={this.props.clearDescription} to='/about'>
                         <div className='selection' onMouseOver={this.props.handleChange} onMouseOut={this.props.clearDescription} value='about' >
                             ABOUT ME
