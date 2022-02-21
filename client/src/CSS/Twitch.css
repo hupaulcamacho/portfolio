@@ -1,0 +1,25 @@
+.twitch-main {
+    margin:auto;
+    width: 100vw;
+    height: 100vh;
+}
+
+.traplordhuey {
+    margin:auto;
+    padding: 10px;
+}
+
+.back-home-twitch {
+    font-size: 2vw;
+    padding-left: 5%;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    width: 15%;
+    height: 5%;
+}
+
+.back-home-twitch {
+    /* background: linear-gradient(to right, red , rgba(255, 255, 255, 0)); */
+    background-color: red;
+    animation: pulse-red 1s infinite;
+}

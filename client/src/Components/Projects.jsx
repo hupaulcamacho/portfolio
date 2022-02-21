@@ -17,7 +17,7 @@ import ryu from '../Assets/ryu_char_select.png';
 import ken from '../Assets/ken_char_select.png';
 import bison from '../Assets/bison_char_select.png';
 
-import '../CSS/Projects.scss'
+import '../CSS/Projects.css'
 
 const projects = {
     'Hand Me Down': {

@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from 'react';
-import { Route, Switch } from 'react-router-dom'
+import { Route, Switch } from 'react-router-dom';
 import './App.css';
 
-import Home from './Components/Home'
-import About from './Components/About'
-import Projects from './Components/Projects'
-import Skills from './Components/Skills'
+import Home from './Components/Home';
+import About from './Components/About';
+import Projects from './Components/Projects';
+import Skills from './Components/Skills';
 import StreetFighter from './Game/StreetFighter';
+import Twitch from  './Components/Twitch';
 
 function App() {
   const [ isLoading, setIsLoading ] = useState(true);
@@ -49,6 +50,7 @@ function App() {
         <Route exact path='/projects/:projectname' component={Projects} />
         <Route path='/projects' render={renderProjects} />
         <Route path='/about' component={About} />
+        <Route path='/twitch' component={Twitch} />
         <Route path='/' component={Home} />
       </Switch>
     </div>

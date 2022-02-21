@@ -16,6 +16,9 @@ const descriptions = {
     'SKILLS': {
         text: 'Programming languages and skills I have learned and mastered.'
     },
+    'TWITCH': {
+        text: 'Watch live competitive gameplay from my twitch channel.'
+    },
     'STREET FIGHTER': {
         text: "What's this?"
     }

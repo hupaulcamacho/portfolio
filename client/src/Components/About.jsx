@@ -5,7 +5,7 @@ import github from '../Assets/github.png'
 import linkedin from '../Assets/linkedin.png'
 import movelist from '../Assets/movelist.jpg'
 
-import '../CSS/About.scss'
+import '../CSS/About.css'
 
 const stats = {
     name: 'Hupaul Camacho',
